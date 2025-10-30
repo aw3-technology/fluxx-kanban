@@ -1,0 +1,260 @@
+@import @/styles/variables
+
+.outer
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    min-height: 100svh
+    padding: 40px 8px
+    background-color: #444444
+    @media only screen and (max-width: "767px")
+        padding: 0
+
+.settingsContainer
+    position: relative
+    z-index: 3
+    width: 100%
+    max-width: 600px
+    max-height: 90vh
+    border-radius: 32px
+    overflow: hidden
+    @media only screen and (max-width: "767px")
+        max-width: 100%
+        max-height: 100svh
+        height: 100svh
+        border-radius: 0
+    &:before,
+    &:after
+        content: ""
+        position: absolute
+        inset: 0
+        border-radius: 32px
+        @media only screen and (max-width: "767px")
+            border-radius: 0
+    &:before
+        background: rgba($n3, 0.70)
+        box-shadow: 2px 4px 16px 0px rgba($n2, 0.06) inset
+        backdrop-filter: blur(50px)
+    &:after
+        pointer-events: none
+        border: 1.5px solid rgba($n1, 0.05)
+        mask-image: linear-gradient(to bottom, black, transparent 100%)
+
+.header
+    position: relative
+    z-index: 2
+    display: flex
+    align-items: center
+    gap: 16px
+    padding: 24px 28px
+    border-bottom: 1px solid rgba($n1, 0.05)
+
+.back
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: rgba($n2, .05)
+    cursor: pointer
+    transition: background .2s
+    svg
+        fill: $text-secondary
+        transform: rotate(180deg)
+    &:hover
+        background: rgba($n2, .1)
+
+.title
+    +title
+    color: $text-primary
+    flex: 1
+
+.content
+    position: relative
+    z-index: 1
+    padding: 20px 28px
+    overflow-y: auto
+    max-height: calc(90vh - 88px)
+    @media only screen and (max-width: "767px")
+        max-height: calc(100svh - 88px)
+    &::-webkit-scrollbar
+        width: 6px
+    &::-webkit-scrollbar-track
+        background: rgba($n1, 0.02)
+    &::-webkit-scrollbar-thumb
+        background: rgba($n1, 0.1)
+        border-radius: 3px
+        &:hover
+            background: rgba($n1, 0.15)
+
+.section
+    margin-bottom: 32px
+    &:last-child
+        margin-bottom: 0
+
+.sectionTitle
+    +base-m
+    color: $text-primary
+    margin-bottom: 16px
+
+.settingItem
+    position: relative
+    padding: 20px
+    border-radius: 16px
+    background: rgba($n2, .02)
+    backdrop-filter: blur(5px)
+    margin-bottom: 12px
+    transition: background .2s
+    &:last-child
+        margin-bottom: 0
+    &:before
+        content: ""
+        position: absolute
+        inset: 0
+        border-radius: 16px
+        border: 1px solid rgba($n1, 0.05)
+        pointer-events: none
+    &:hover
+        background: rgba($n2, .05)
+
+.viewLink
+    display: flex
+    align-items: center
+    gap: 16px
+    text-decoration: none
+    width: 100%
+    svg:last-child
+        transform: rotate(180deg)
+        fill: $text-tertiary
+        opacity: .5
+
+.viewIcon
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    background: rgba($n2, .05)
+    flex-shrink: 0
+    svg
+        fill: $text-secondary
+
+.settingInfo
+    flex: 1
+    min-width: 0
+
+.settingLabel
+    +base-m
+    color: $text-primary
+    margin-bottom: 4px
+
+.settingDescription
+    +caption-r
+    color: $text-tertiary
+
+.settingControl
+    display: flex
+    align-items: center
+
+.badge
+    +caption-r
+    color: $text-secondary
+    padding: 6px 12px
+    border-radius: 8px
+    background: rgba($n2, .05)
+
+.background
+    position: fixed
+    inset: 0
+    visibility: hidden
+    opacity: 0
+    transition: all .2s
+    &:after
+        content: ""
+        position: absolute
+        inset: 0
+        background: rgba(#000, .35)
+    .image
+        object-fit: cover
+    &.visible
+        visibility: visible
+        opacity: 1
+
+.logo
+    position: absolute
+    top: 32px
+    left: 32px
+    z-index: 3
+    @media only screen and (max-width: "767px")
+        display: none
+
+.options
+    position: absolute
+    left: 32px
+    bottom: 32px
+    display: flex
+    gap: 12px
+    z-index: 3
+    @media only screen and (max-width: "767px")
+        display: none
+
+.option
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 52px
+    height: 52px
+    flex-shrink: 0
+    border: none
+    border-radius: 50%
+    cursor: pointer
+    font-size: 0
+    outline: none
+    background: none
+    border: 3px solid transparent
+    transition: border-color .2s
+    img
+        transition: transform .3s
+    &:hover
+        .circle,
+        img
+            transform: scale(1.08)
+    &.active
+        border-color: rgba($n2, .6)
+        .circle,
+        img
+            transform: scale(0.9)
+        .circle
+            &:before
+                background: rgba($n3, .8)
+            &:after
+                opacity: 0
+
+.circle
+    position: relative
+    flex-shrink: 0
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    overflow: hidden
+    transition: all .2s
+    &:before,
+    &::after
+        content: ""
+        position: absolute
+        inset: 0
+        border-radius: 50%
+    &:before
+        background: rgba($n3, .7)
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%)
+        box-shadow: 2px 4px 16px 0px rgba(248, 248, 248, 0.06)
+        backdrop-filter: blur(50px)
+        transition: background .2s
+    &:after
+        z-index: 1
+        border: 1.5px solid rgba(255, 255, 255, 0.2)
+        mask-image: linear-gradient(160deg, black, transparent 50%)
+        transition: opacity .2s

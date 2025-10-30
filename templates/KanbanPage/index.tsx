@@ -31,13 +31,13 @@ const KanbanPage = () => {
                 >
                     <Icon name="arrow-left" />
                 </Link>
-                <a
+                <Link
                     className={styles.link}
-                    href="https://ui8.net/ui8/products/bento-cards-simplelist"
-                    target="_blank"
+                    href="/settings"
+                    title="Settings"
                 >
-                    <Icon name="bag" />
-                </a>
+                    <Icon name="settings" />
+                </Link>
             </div>
             <div
                 className={cn(styles.background, {
