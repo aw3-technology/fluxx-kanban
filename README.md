@@ -1,6 +1,6 @@
-# Kavanah - Task Management
+# Fluxxboard - Task Management
 
-Focus on what matters with Kavanah's intuitive task management system.
+Focus on what matters with Fluxxboard's intuitive task management system.
 
 ## Features
 

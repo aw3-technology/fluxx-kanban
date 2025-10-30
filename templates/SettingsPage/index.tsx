@@ -74,7 +74,7 @@ const SettingsPage = () => {
                             <div className={styles.settingInfo}>
                                 <div className={styles.settingLabel}>Version</div>
                                 <div className={styles.settingDescription}>
-                                    Kavanah 0.1.0
+                                    Fluxxboard 0.1.0
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@ const SettingsPage = () => {
                     priority={true}
                     width={52}
                     height={52}
-                    alt="Kavanah"
+                    alt="Fluxxboard"
                 />
             </a>
 

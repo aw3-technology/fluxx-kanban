@@ -11,8 +11,8 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-    title: "Kavanah - Task Management",
-    description: "Focus on what matters with Kavanah's intuitive task management",
+    title: "Fluxxboard - Task Management",
+    description: "Focus on what matters with Fluxxboard's intuitive task management",
 };
 
 export default function RootLayout({
@@ -24,15 +24,15 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 {/* Description no longer than 155 characters */}
-                <meta name="description" content="Focus on what matters with Kavanah's intuitive task management" />
+                <meta name="description" content="Focus on what matters with Fluxxboard's intuitive task management" />
                 {/* Product Name */}
-                <meta name="product-name" content="Kavanah" />
+                <meta name="product-name" content="Fluxxboard" />
                 {/* Twitter Card data */}
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content="Kavanah - Task Management" />
+                <meta name="twitter:title" content="Fluxxboard - Task Management" />
                 <meta
                     name="twitter:description"
-                    content="Focus on what matters with Kavanah's intuitive task management"
+                    content="Focus on what matters with Fluxxboard's intuitive task management"
                 />
                 {/* Twitter Summary card images must be at least 120x120px */}
                 <meta
@@ -41,7 +41,7 @@ export default function RootLayout({
                 />
 
                 {/* Open Graph data for Facebook */}
-                <meta property="og:title" content="Kavanah - Task Management" />
+                <meta property="og:title" content="Fluxxboard - Task Management" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:image"
@@ -49,33 +49,33 @@ export default function RootLayout({
                 />
                 <meta
                     property="og:description"
-                    content="Focus on what matters with Kavanah's intuitive task management"
+                    content="Focus on what matters with Fluxxboard's intuitive task management"
                 />
                 <meta
                     property="og:site_name"
-                    content="Kavanah"
+                    content="Fluxxboard"
                 />
 
                 {/* Open Graph data for LinkedIn */}
-                <meta property="og:title" content="Kavanah - Task Management" />
+                <meta property="og:title" content="Fluxxboard - Task Management" />
                 <meta
                     property="og:image"
                     content="%PUBLIC_URL%/linkedin-og-image.png"
                 />
                 <meta
                     property="og:description"
-                    content="Focus on what matters with Kavanah's intuitive task management"
+                    content="Focus on what matters with Fluxxboard's intuitive task management"
                 />
 
                 {/* Open Graph data for Pinterest */}
-                <meta property="og:title" content="Kavanah - Task Management" />
+                <meta property="og:title" content="Fluxxboard - Task Management" />
                 <meta
                     property="og:image"
                     content="%PUBLIC_URL%/pinterest-og-image.png"
                 />
                 <meta
                     property="og:description"
-                    content="Focus on what matters with Kavanah's intuitive task management"
+                    content="Focus on what matters with Fluxxboard's intuitive task management"
                 />
             </head>
             <body className={rubik.className}>{children}</body>
