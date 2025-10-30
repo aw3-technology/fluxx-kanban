@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kavanah - Task Management
+
+Focus on what matters with Kavanah's intuitive task management system.
+
+## Features
+
+- **List View**: Classic task list with groups and completion tracking
+- **Kanban Board**: Visual board with drag-and-drop between columns
+- **Drag & Drop**: Reorder tasks and columns with smooth interactions
+- **Modern Design**: Beautiful glassmorphic UI with dark theme
+- **Persistent State**: Zustand-powered state management
 
 ## Getting Started
 
@@ -8,29 +18,26 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the list view.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000/kanban](http://localhost:3000/kanban) to see the kanban board.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech Stack
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Framework**: Next.js 14 with App Router
+- **State Management**: Zustand
+- **Drag & Drop**: @hello-pangea/dnd
+- **Styling**: SASS modules
+- **Font**: Rubik (Google Fonts)
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy is using the [Vercel Platform](https://vercel.com/new).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Push your code to GitHub
+2. Import your repository on Vercel
+3. Deploy with one click
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

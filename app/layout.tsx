@@ -11,8 +11,8 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-    title: "Bento Cards: SimpleList",
-    description: "Minimal to-do list app UI design kit + landing page",
+    title: "Kavanah - Task Management",
+    description: "Focus on what matters with Kavanah's intuitive task management",
 };
 
 export default function RootLayout({
@@ -24,18 +24,16 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 {/* Description no longer than 155 characters */}
-                <meta name="description" content="Bento Cards: SimpleList" />
+                <meta name="description" content="Focus on what matters with Kavanah's intuitive task management" />
                 {/* Product Name */}
-                <meta name="product-name" content="Bento Cards: SimpleList" />
+                <meta name="product-name" content="Kavanah" />
                 {/* Twitter Card data */}
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:site" content="@ui8" />
-                <meta name="twitter:title" content="Bento Cards: SimpleList" />
+                <meta name="twitter:title" content="Kavanah - Task Management" />
                 <meta
                     name="twitter:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Focus on what matters with Kavanah's intuitive task management"
                 />
-                <meta name="twitter:creator" content="@ui8" />
                 {/* Twitter Summary card images must be at least 120x120px */}
                 <meta
                     name="twitter:image"
@@ -43,54 +41,41 @@ export default function RootLayout({
                 />
 
                 {/* Open Graph data for Facebook */}
-                <meta property="og:title" content="Bento Cards: SimpleList" />
-                <meta property="og:type" content="Article" />
-                <meta
-                    property="og:url"
-                    content="https://ui8.net/ui8/products/bento-cards-simplelist"
-                />
+                <meta property="og:title" content="Kavanah - Task Management" />
+                <meta property="og:type" content="website" />
                 <meta
                     property="og:image"
                     content="%PUBLIC_URL%/fb-og-image.png"
                 />
                 <meta
                     property="og:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Focus on what matters with Kavanah's intuitive task management"
                 />
                 <meta
                     property="og:site_name"
-                    content="Bento Cards: SimpleList"
+                    content="Kavanah"
                 />
-                <meta property="fb:admins" content="132951670226590" />
 
                 {/* Open Graph data for LinkedIn */}
-                <meta property="og:title" content="Bento Cards: SimpleList" />
-                <meta
-                    property="og:url"
-                    content="https://ui8.net/ui8/products/bento-cards-simplelist"
-                />
+                <meta property="og:title" content="Kavanah - Task Management" />
                 <meta
                     property="og:image"
                     content="%PUBLIC_URL%/linkedin-og-image.png"
                 />
                 <meta
                     property="og:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Focus on what matters with Kavanah's intuitive task management"
                 />
 
                 {/* Open Graph data for Pinterest */}
-                <meta property="og:title" content="Bento Cards: SimpleList" />
-                <meta
-                    property="og:url"
-                    content="https://ui8.net/ui8/products/bento-cards-simplelist"
-                />
+                <meta property="og:title" content="Kavanah - Task Management" />
                 <meta
                     property="og:image"
                     content="%PUBLIC_URL%/pinterest-og-image.png"
                 />
                 <meta
                     property="og:description"
-                    content="Minimal to-do list app UI design kit + landing page"
+                    content="Focus on what matters with Kavanah's intuitive task management"
                 />
             </head>
             <body className={rubik.className}>{children}</body>
