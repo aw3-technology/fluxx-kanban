@@ -42,6 +42,12 @@ type Store = {
     ) => void;
     duplicateTask: (groupId: string, taskId: string) => void;
     deleteTask: (groupId: string, taskId: string) => void;
+    moveTaskBetweenGroups: (
+        sourceGroupId: string,
+        destinationGroupId: string,
+        sourceIndex: number,
+        destinationIndex: number
+    ) => void;
 };
 
 const useTasksStore = create<Store>((set) => ({
@@ -248,6 +254,45 @@ const useTasksStore = create<Store>((set) => ({
                     : group
             ),
         }));
+    },
+    moveTaskBetweenGroups: (
+        sourceGroupId,
+        destinationGroupId,
+        sourceIndex,
+        destinationIndex
+    ) => {
+        set((state) => {
+            const sourceGroupIndex = state.tasks.findIndex(
+                (group) => group.id === sourceGroupId
+            );
+            const destinationGroupIndex = state.tasks.findIndex(
+                (group) => group.id === destinationGroupId
+            );
+
+            if (sourceGroupIndex === -1 || destinationGroupIndex === -1)
+                return state;
+
+            const newTasks = [...state.tasks];
+            const sourceGroup = { ...newTasks[sourceGroupIndex] };
+            const destinationGroup = { ...newTasks[destinationGroupIndex] };
+
+            const sourceTasks = [...sourceGroup.tasks];
+            const [movedTask] = sourceTasks.splice(sourceIndex, 1);
+
+            const destinationTasks = [...destinationGroup.tasks];
+            destinationTasks.splice(destinationIndex, 0, movedTask);
+
+            newTasks[sourceGroupIndex] = {
+                ...sourceGroup,
+                tasks: sourceTasks,
+            };
+            newTasks[destinationGroupIndex] = {
+                ...destinationGroup,
+                tasks: destinationTasks,
+            };
+
+            return { tasks: newTasks };
+        });
     },
 }));
 

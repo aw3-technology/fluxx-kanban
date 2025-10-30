@@ -5,15 +5,15 @@ import cn from "classnames";
 import Link from "next/link";
 import { default as NextImage } from "next/image";
 import Icon from "@/components/Icon";
-import SimpleList from "@/components/SimpleList";
-import styles from "./Home.module.sass";
+import KanbanBoard from "@/components/KanbanBoard";
+import styles from "./KanbanPage.module.sass";
 
-const HomePage = () => {
+const KanbanPage = () => {
     const [activeId, setActiveId] = useState(0);
 
     return (
         <div className={styles.outer}>
-            <SimpleList className={styles.simpleList} />
+            <KanbanBoard className={styles.kanbanBoard} />
             <Link className={styles.logo} href="/">
                 <NextImage
                     src="/images/demo/logo.png"
@@ -26,10 +26,10 @@ const HomePage = () => {
             <div className="">
                 <Link
                     className={styles.link}
-                    href="/kanban"
-                    title="Kanban View"
+                    href="/"
+                    title="Back to List View"
                 >
-                    <Icon name="memory" />
+                    <Icon name="arrow-left" />
                 </Link>
                 <a
                     className={styles.link}
@@ -78,4 +78,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default KanbanPage;

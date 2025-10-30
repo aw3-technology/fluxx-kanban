@@ -1,0 +1,74 @@
+@import @/styles/variables
+
+.card
+    position: relative
+    cursor: grab
+    &:active
+        cursor: grabbing
+    &.completed
+        .inner
+            background: rgba($n2, .02)
+        .radio
+            &:before
+                opacity: 1
+        .title
+            color: $text-tertiary
+    &.dragging
+        opacity: 0.5
+    &:hover
+        .inner
+            background: rgba($n2, .1)
+        .radio
+            border-color: rgba($n2, .5)
+        .drag svg
+            opacity: .5
+
+.inner
+    position: relative
+    width: 100%
+    padding: 16px 44px 16px 48px
+    background: rgba($n2, .05)
+    backdrop-filter: blur(5px)
+    border-radius: 12px
+    user-select: none
+    transition: background .2s
+
+.radio
+    position: absolute
+    top: 14px
+    left: 12px
+    width: 24px
+    height: 24px
+    border: 3px solid rgba($n2, .25)
+    border-radius: 50%
+    cursor: pointer
+    transition: border-color .2s
+    background: transparent
+    outline: none
+    &:before
+        content: ""
+        position: absolute
+        inset: 3px
+        border-radius: 50%
+        background: linear-gradient(180deg, rgba(248, 248, 248, 0.90) 0%, rgba(248, 248, 248, 0.30) 100%)
+        opacity: 0
+        transition: opacity .2s
+
+.title
+    +base-2r
+    color: $text-secondary
+    line-height: 1.5
+
+.drag
+    position: absolute
+    top: 50%
+    right: 12px
+    transform: translateY(-50%)
+    font-size: 0
+    cursor: grab
+    &:active
+        cursor: grabbing
+    svg
+        fill: $text-tertiary
+        opacity: .25
+        transition: opacity .2s
