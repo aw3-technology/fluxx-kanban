@@ -13,6 +13,26 @@ const rubik = Rubik({
 export const metadata: Metadata = {
     title: "FluxxBoard",
     description: "Focus on what matters with Fluxxboard's intuitive task management",
+    openGraph: {
+        title: "FluxxBoard",
+        description: "Focus on what matters with Fluxxboard's intuitive task management",
+        type: "website",
+        siteName: "FluxxBoard",
+        images: [
+            {
+                url: "/fb-og-image.png",
+                width: 1954,
+                height: 1144,
+                alt: "FluxxBoard",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "FluxxBoard",
+        description: "Focus on what matters with Fluxxboard's intuitive task management",
+        images: ["/twitter-card.png"],
+    },
 };
 
 export default function RootLayout({
@@ -22,62 +42,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <head>
-                {/* Description no longer than 155 characters */}
-                <meta name="description" content="Focus on what matters with Fluxxboard's intuitive task management" />
-                {/* Product Name */}
-                <meta name="product-name" content="Fluxxboard" />
-                {/* Twitter Card data */}
-                <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content="FluxxBoard" />
-                <meta
-                    name="twitter:description"
-                    content="Focus on what matters with Fluxxboard's intuitive task management"
-                />
-                {/* Twitter Summary card images must be at least 120x120px */}
-                <meta
-                    name="twitter:image"
-                    content="%PUBLIC_URL%/twitter-card.png"
-                />
-
-                {/* Open Graph data for Facebook */}
-                <meta property="og:title" content="FluxxBoard" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:image"
-                    content="%PUBLIC_URL%/fb-og-image.png"
-                />
-                <meta
-                    property="og:description"
-                    content="Focus on what matters with Fluxxboard's intuitive task management"
-                />
-                <meta
-                    property="og:site_name"
-                    content="Fluxxboard"
-                />
-
-                {/* Open Graph data for LinkedIn */}
-                <meta property="og:title" content="FluxxBoard" />
-                <meta
-                    property="og:image"
-                    content="%PUBLIC_URL%/linkedin-og-image.png"
-                />
-                <meta
-                    property="og:description"
-                    content="Focus on what matters with Fluxxboard's intuitive task management"
-                />
-
-                {/* Open Graph data for Pinterest */}
-                <meta property="og:title" content="FluxxBoard" />
-                <meta
-                    property="og:image"
-                    content="%PUBLIC_URL%/pinterest-og-image.png"
-                />
-                <meta
-                    property="og:description"
-                    content="Focus on what matters with Fluxxboard's intuitive task management"
-                />
-            </head>
             <body className={rubik.className}>{children}</body>
         </html>
     );
