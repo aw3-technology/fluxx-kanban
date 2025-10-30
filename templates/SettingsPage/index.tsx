@@ -82,7 +82,7 @@ const SettingsPage = () => {
                 </div>
             </div>
 
-            <a className={styles.logo} href="http://localhost:3001">
+            <a className={styles.logo} href="https://fluxxboard-landing-page.vercel.app/">
                 <NextImage
                     src="/images/demo/logo.png"
                     priority={true}
