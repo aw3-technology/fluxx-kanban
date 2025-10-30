@@ -11,7 +11,7 @@ const rubik = Rubik({
 });
 
 export const metadata: Metadata = {
-    title: "Fluxxboard - Task Management",
+    title: "FluxxBoard",
     description: "Focus on what matters with Fluxxboard's intuitive task management",
 };
 
@@ -29,7 +29,7 @@ export default function RootLayout({
                 <meta name="product-name" content="Fluxxboard" />
                 {/* Twitter Card data */}
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content="Fluxxboard - Task Management" />
+                <meta name="twitter:title" content="FluxxBoard" />
                 <meta
                     name="twitter:description"
                     content="Focus on what matters with Fluxxboard's intuitive task management"
@@ -41,7 +41,7 @@ export default function RootLayout({
                 />
 
                 {/* Open Graph data for Facebook */}
-                <meta property="og:title" content="Fluxxboard - Task Management" />
+                <meta property="og:title" content="FluxxBoard" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:image"
@@ -57,7 +57,7 @@ export default function RootLayout({
                 />
 
                 {/* Open Graph data for LinkedIn */}
-                <meta property="og:title" content="Fluxxboard - Task Management" />
+                <meta property="og:title" content="FluxxBoard" />
                 <meta
                     property="og:image"
                     content="%PUBLIC_URL%/linkedin-og-image.png"
@@ -68,7 +68,7 @@ export default function RootLayout({
                 />
 
                 {/* Open Graph data for Pinterest */}
-                <meta property="og:title" content="Fluxxboard - Task Management" />
+                <meta property="og:title" content="FluxxBoard" />
                 <meta
                     property="og:image"
                     content="%PUBLIC_URL%/pinterest-og-image.png"
