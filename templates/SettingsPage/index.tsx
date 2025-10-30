@@ -82,7 +82,7 @@ const SettingsPage = () => {
                 </div>
             </div>
 
-            <Link className={styles.logo} href="/">
+            <a className={styles.logo} href="http://localhost:3001">
                 <NextImage
                     src="/images/demo/logo.png"
                     priority={true}
@@ -90,7 +90,7 @@ const SettingsPage = () => {
                     height={52}
                     alt="Kavanah"
                 />
-            </Link>
+            </a>
 
             <div
                 className={cn(styles.background, {

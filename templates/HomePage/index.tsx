@@ -14,7 +14,7 @@ const HomePage = () => {
     return (
         <div className={styles.outer}>
             <SimpleList className={styles.simpleList} />
-            <Link className={styles.logo} href="/">
+            <a className={styles.logo} href="http://localhost:3001">
                 <NextImage
                     src="/images/demo/logo.png"
                     priority={true}
@@ -22,7 +22,7 @@ const HomePage = () => {
                     height={52}
                     alt=""
                 />
-            </Link>
+            </a>
             <div className="">
                 <Link
                     className={styles.link}

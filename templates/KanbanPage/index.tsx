@@ -14,7 +14,7 @@ const KanbanPage = () => {
     return (
         <div className={styles.outer}>
             <KanbanBoard className={styles.kanbanBoard} />
-            <Link className={styles.logo} href="/">
+            <a className={styles.logo} href="http://localhost:3001">
                 <NextImage
                     src="/images/demo/logo.png"
                     priority={true}
@@ -22,7 +22,7 @@ const KanbanPage = () => {
                     height={52}
                     alt=""
                 />
-            </Link>
+            </a>
             <div className="">
                 <Link
                     className={styles.link}
